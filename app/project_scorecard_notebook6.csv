@@ -1,0 +1,12 @@
+Category,Metric,Result
+Notebook 6 — Monitoring & A/B Testing,Input drift detected (unmodified validation data),False (p=0.1474)
+Notebook 6 — Monitoring & A/B Testing,Input drift detected (simulated sensor shift),True (p=0.0000)
+Notebook 6 — Monitoring & A/B Testing,Prediction drift — current data,False (p=0.1474)
+Notebook 6 — Monitoring & A/B Testing,Prediction drift — drifted data,True (p=0.0000)
+Notebook 6 — Monitoring & A/B Testing,Required A/B sample size per group (power=0.8),4070
+Notebook 6 — Monitoring & A/B Testing,A/B test — control mean cost,$500.00
+Notebook 6 — Monitoring & A/B Testing,A/B test — treatment mean cost,$440.05
+Notebook 6 — Monitoring & A/B Testing,A/B test — cost difference,$59.95
+Notebook 6 — Monitoring & A/B Testing,A/B test — p-value,0.10062
+Notebook 6 — Monitoring & A/B Testing,A/B test — Cohen's d,0.036
+Notebook 6 — Monitoring & A/B Testing,A/B test — 95% CI for cost difference,"($-11.60, $131.50)"

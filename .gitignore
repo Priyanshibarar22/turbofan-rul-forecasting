@@ -1,7 +1,37 @@
-rul_env/  
-__pycache__/  
-*.pyc  
-.ipynb_checkpoints/  
-data/raw/  
-.env  
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+app/__pycache__/
+app/.pytest_cache/
+
+# --- Virtual environment ---
+rul_env/
+venv/
+*.egg-info/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- MLflow ---
+mlruns/
+mlflow.db
+
+# --- Raw dataset (NASA CMAPSS — large, publicly downloadable) ---
+data/raw/*.txt
+!data/raw/readme.txt
+
+# --- Processed data (regenerable via notebooks 01-02) ---
+data/processed/*.csv
+
+# --- Model checkpoints not used by the deployed app ---
+models/*.pt
+models/rf_fd001.pkl
+# Keep the model the FastAPI app actually loads:
+!models/xgb_fd001.pkl
+
+# --- OS / editor junk ---
 .DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,14 @@
+Category,Metric,Result
+Notebook 1 — EDA,Datasets analyzed,4 (FD001-FD004)
+Notebook 1 — EDA,Statistically significant sensors (p<0.05),14 of 14
+Notebook 2 — Feature Engineering & Baselines,Feature engineering signal improvement,10.7%
+Notebook 2 — Feature Engineering & Baselines,Best baseline (XGBoost) RMSE,14.75
+Notebook 2 — Feature Engineering & Baselines,Early-warning classifier AUC (30-cycle),0.992
+Notebook 2 — Feature Engineering & Baselines,Simulated maintenance cost savings,"$244,000 (12.0%)"
+Notebook 3 — Sequence Models,Best window size (ablation-tested),60 cycles (RMSE 54.69)
+Notebook 3 — Sequence Models,LSTM RMSE,11.17
+Notebook 3 — Sequence Models,GRU RMSE,10.40
+Notebook 4 — Transformer & Uncertainty,Transformer RMSE,10.50
+Notebook 4 — Transformer & Uncertainty,Best uncertainty method calibration (80% target),19.1%
+Notebook 5 — Explainability,SHAP/Permutation top-10 feature overlap,10/10
+Notebook 5 — Explainability,Strongest sensor interaction found,cycle × sensor_11_rollmean
