@@ -22,9 +22,6 @@ mlflow.db
 data/raw/*.txt
 !data/raw/readme.txt
 
-# --- Processed data (regenerable via notebooks 01-02) ---
-data/processed/*.csv
-
 # --- Model checkpoints not used by the deployed app ---
 models/*.pt
 models/rf_fd001.pkl
