@@ -121,27 +121,37 @@ Model predictions are interpreted using **SHAP**, identifying which sensor readi
 
 A Streamlit dashboard provides fleet-level and single-engine monitoring on top of the deployed model.
 
-**Try it live:** [LIVE_Dashboard](https://priyanshibarar22-turbofan-rul-forecas-appfinal-dashboard-yrt8c3.streamlit.app/)
+**Try it live:** [LIVE Dashboard](https://priyanshibarar22-turbofan-rul-forecas-appfinal-dashboard-yrt8c3.streamlit.app/)
+
+**Engine Selection** — select an engine to view its individual RUL prediction, health status, operating-cycle history, and SHAP-based explanation
+
+![Engine Selection](screenshots/engine_selection.png)
 
 **Fleet Overview** — status and RUL summary across all engines (vectorized, batch-scored)
 
-![Fleet Overview](screenshots/fleet_overview.png)
+![Fleet Overview](screenshots/current_fleet_health.png)
+![Fleet Overview](screenshots/fleet_risk_distribution.png)
+
+**Single Engine Drill-down** — RUL-over-time chart, health status, and SHAP "why this prediction" explanation
+
+![Engine Drilldown](screenshots/rul_overtime.png)
+![Engine Drilldown](screenshots/topfeatures_contributing.png)
+
+**Live Monitoring Simulation** — animated replay of an individual engine's operating cycles
+
+![Live Monitoring](screenshots/live_monitor_simulation.png)
+![Live Monitoring](screenshots/live_feed.png)
 
 **Model Robustness & Drift Simulator** — interactive slider to artificially shift sensor data and observe live RMSE degradation
 
 ![Drift Simulator](screenshots/drift_simulator.png)
 
-**Single Engine Drill-down** — RUL-over-time chart, health status, and SHAP "why this prediction" explanation
-
-![Engine Drilldown](screenshots/engine_drilldown.png)
-
-**Live Monitoring Simulation** — animated replay of an individual engine's operating cycles
-
-![Live Monitoring](screenshots/live_monitoring.png)
-
 **Detailed Drift Reports** — embedded Evidently drift reports (baseline vs. current, and baseline vs. simulated drift)
 
-![Drift Reports](screenshots/drift_reports.png)
+![Drift Reports](screenshots/val_vs_train.png)
+![Drift Reports](screenshots/simulated_drift_scenario.png)
+![Drift Reports](screenshots/val_vs_train_data_drift_summary.png)
+![Drift Reports](screenshots/simulated_drift_scenario_data_drift_summary.png)
 
 ---
 
@@ -200,7 +210,7 @@ turbofan-rul-forecasting/
 
 ```bash
 # 1. Clone the repository
-git clone [[ADD VALUE — repo URL](https://github.com/Priyanshibarar22/turbofan-rul-forecasting)]
+git clone [[ADD VALUE — repo URL](https://github.com/Priyanshibarar22/turbofan-rul-forecasting.git)]
 cd turbofan-rul-forecasting
 
 # 2. Create and activate a virtual environment
@@ -220,7 +230,7 @@ pip install -r requirements.txt
 
 **Option 1 — Use the live Streamlit dashboard (no setup required):**
 
-Visit [LIVE_Dashboard](https://priyanshibarar22-turbofan-rul-forecas-appfinal-dashboard-yrt8c3.streamlit.app/) to explore Fleet Overview, the Drift Simulator, single-engine drill-down, live monitoring, and drift reports directly in the browser.
+Visit [LIVE Dashboard](https://priyanshibarar22-turbofan-rul-forecas-appfinal-dashboard-yrt8c3.streamlit.app/) to explore Fleet Overview, the Drift Simulator, single-engine drill-down, live monitoring, and drift reports directly in the browser.
 
 **Option 2 — Run the dashboard via Docker (fully reproducible, runs locally):**
 
