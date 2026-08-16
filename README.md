@@ -164,7 +164,6 @@ turbofan-rul-forecasting/
 │   ├── main.py                       # FastAPI inference service
 │   ├── final_dashboard.py                  # Streamlit monitoring dashboard
 │   ├── test_main.py                  # pytest suite for the API
-│   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── drift_report.html             # Evidently baseline vs. current
 │   ├── simulated_drift_report.html   # Evidently baseline vs. simulated drift
@@ -174,11 +173,18 @@ turbofan-rul-forecasting/
 │   └── project_scorecard_notebooks1to5.csv
 │
 ├── screenshots/                       # Dashboard screenshots used in this README
-│   ├── fleet_overview.png
-│   ├── drift_simulator.png
-│   ├── engine_drilldown.png
-│   ├── live_monitoring.png
-│   └── drift_reports.png
+│   ├── current_fleet_health.png
+│   ├──drift_simulator.png
+│   ├──engine_selection.png
+│   ├──fleet_risk_distribution.png
+│   ├──live_feed.png
+│   ├──live_monitor_simulation.png
+│   ├──rul_overtime.png
+│   ├──simulated_drift_scenario.png
+│   ├──simulated_drift_scenario_data_drift_summary.png
+│   ├──topfeatures_contributing.png
+│   ├──val_vs_train.png
+│   ├──val_vs_train_data_drift_summary.png
 │
 ├── data/
 │   ├── raw/                          # Original C-MAPSS files (not versioned — see .gitignore)
@@ -196,12 +202,14 @@ turbofan-rul-forecasting/
 │   ├── 05_explainability.ipynb
 │   └── 06_monitoring_ab_testing.ipynb
 │
-├── src/                               # Shared/reusable pipeline code
-├── mlruns/                            # MLflow tracking (local, not versioned)
+|
+├── .devcontainer/
+│   ├── devcontainer.json
+│   
+│   
 ├── requirements.txt
 ├── README.md
-├──.gitignore
-└── .devcontainer
+└──.gitignore
 ```
 
 ---
@@ -232,17 +240,8 @@ pip install -r requirements.txt
 
 Visit [LIVE Dashboard](https://priyanshibarar22-turbofan-rul-forecas-appfinal-dashboard-yrt8c3.streamlit.app/) to explore Fleet Overview, the Drift Simulator, single-engine drill-down, live monitoring, and drift reports directly in the browser.
 
-**Option 2 — Run the dashboard via Docker (fully reproducible, runs locally):**
 
-```bash
-cd app
-docker build -t turbofan-rul-api .
-docker run -p 8000:8000 turbofan-rul-api
-```
-
-This runs the same dashboard and API inside a container, matching the environment used for deployment — useful if you want to verify the project runs identically outside of Streamlit Cloud.
-
-**Option 3 — Run the notebooks** (in order, 01 → 06) to reproduce preprocessing, training, evaluation, explainability, and monitoring experiments.
+**Option 2 — Run the notebooks** (in order, 01 → 06) to reproduce preprocessing, training, evaluation, explainability, and monitoring experiments.
 
 **Run the API locally (without Docker):**
 
@@ -278,26 +277,6 @@ FastAPI service (`app/main.py`) exposes:
 | `/health` | GET | Service health check |
 | `/model-info` | GET | Returns metadata about the loaded model |
 | `/predict` | POST | Returns a RUL prediction for a given engine's feature values |
-
----
-
-## Docker
-
-The app is fully containerized for reproducible deployment.
-
-**Docker Image:** [ADD-DOCKER-LINK](ADD-DOCKER-LINK)
-
-```bash
-# Build the image
-cd app
-docker build -t turbofan-rul-forecasting-api .
-
-# Run the container
-docker run -p 8000:8000 turbofan-rul-forecasting-api
-
-# Or pull the pre-built image
-docker pull [ADD VALUE — image name, e.g. username/turbofan-rul-forecasting-api]
-```
 
 ---
 
