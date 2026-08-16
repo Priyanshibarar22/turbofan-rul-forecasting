@@ -218,7 +218,7 @@ turbofan-rul-forecasting/
 
 ```bash
 # 1. Clone the repository
-git clone [[ADD VALUE — repo URL](https://github.com/Priyanshibarar22/turbofan-rul-forecasting.git)]
+git clone https://github.com/Priyanshibarar22/turbofan-rul-forecasting.git
 cd turbofan-rul-forecasting
 
 # 2. Create and activate a virtual environment
