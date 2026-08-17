@@ -291,6 +291,7 @@ FastAPI service (`app/main.py`) exposes:
 
 ## Future Improvements
 
+- Re-evaluate XGBoost on FD004 using the same engine subsample as the deep learning models for a fully consistent comparison.
 - Improve uncertainty calibration (quantile regression / MC Dropout currently unstable)
 - Expand the A/B cost simulation to a larger sample to reach statistical significance
 - Add CI/CD for automated testing and deployment
