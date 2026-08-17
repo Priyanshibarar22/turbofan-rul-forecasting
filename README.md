@@ -127,7 +127,7 @@ A Streamlit dashboard provides fleet-level and single-engine monitoring on top o
 
 ![Engine Selection](screenshots/engine_selection.png)
 
-**Fleet Overview** — status and RUL summary across all engines (vectorized, batch-scored)
+**Fleet Overview** — status, RUL summary across all engines (vectorized, batch-scored) and risk distribution
 
 ![Fleet Overview](screenshots/current_fleet_health.png)
 ![Fleet Overview](screenshots/fleet_risk_distribution.png)
